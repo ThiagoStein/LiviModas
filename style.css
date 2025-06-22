@@ -1,0 +1,320 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #f7d4e1);
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Cabeçalho */
+header {
+  background-color: rgb(224, 96, 135);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+/* Navegação */
+nav {
+  background-color: #ff8aa7;
+  padding: 12px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #ff6f61;
+}
+
+#text_sobre {
+  text-align: center;
+}
+
+/* Galeria */
+.galeria {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.galeria img {
+  width: 50%;
+  border-radius: 8px;
+}
+
+.descricao-galeria {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+}
+
+/* Depoimentos */
+.depoimento {
+  background-color: #ffe5e0;
+  padding: 20px;
+  margin: 10px 0;
+  border-left: 5px solid #ff6f61;
+}
+
+/* Rodapé */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(224, 96, 135);
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Responsividade*/
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  .section-title {
+    font-size: 1.6em;
+  }
+
+  .contato-form input,
+  .contato-form textarea,
+  .contato-form button {
+    font-size: 14px;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.whatsapp-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Slide */
+.slider {
+  margin: 0 auto;
+  width: 360px;
+  height: 478px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 478px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 25%;
+  position: relative;
+  transition: 1s;
+}
+
+.slide img {
+  width: 360px;
+}
+
+.nav-manual {
+  position: absolute;
+  width: 360px;
+  margin: -25px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 20px;
+}
+
+.manual-btn:hover {
+  background: #fff;
+}
+
+#radio1-blusas:checked~.fist {
+  margin-left: 0;
+}
+
+#radio2-blusas:checked~.fist {
+  margin-left: -25%;
+}
+
+#radio3-blusas:checked~.fist {
+  margin-left: -50%;
+}
+
+#radio4-blusas:checked~.fist {
+  margin-left: -75%;
+}
+
+.navegacao div {
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navegacao {
+  position: absolute;
+  width: 310px;
+  margin-top: 453px;
+  display: flex;
+  justify-content: center;
+}
+
+.navegacao div:not(:last-child) {
+  margin-right: 20px
+}
+
+#radio1-blusas:checked~.navegacao .auto-btn1 {
+  background-color: #fff;
+}
+
+#radio2-blusas:checked~.navegacao .auto-btn2 {
+  background-color: #fff;
+}
+
+#radio3-blusas:checked~.navegacao .auto-btn3 {
+  background-color: #fff;
+}
+
+#radio4-blusas:checked~.navegacao .auto-btn4 {
+  background-color: #fff;
+}
+
+/*Conjutos*/
+#radio1-conjuntos:checked~.fist {
+  margin-left: 0;
+}
+
+#radio2-conjuntos:checked~.fist {
+  margin-left: -25%;
+}
+
+#radio3-conjuntos:checked~.fist {
+  margin-left: -50%;
+}
+
+#radio4-conjuntos:checked~.fist {
+  margin-left: -75%;
+}
+
+#radio1-conjuntos:checked~.navegacao .auto-btn1 {
+  background-color: #fff;
+}
+
+#radio2-conjuntos:checked~.navegacao .auto-btn2 {
+  background-color: #fff;
+}
+
+#radio3-conjuntos:checked~.navegacao .auto-btn3 {
+  background-color: #fff;
+}
+
+#radio4-conjuntos:checked~.navegacao .auto-btn4 {
+  background-color: #fff;
+}
+
+
+/*acessorios*/
+
+#radio1-acessorios:checked~.fist {
+  margin-left: 0;
+}
+
+#radio2-acessorios:checked~.fist {
+  margin-left: -25%;
+}
+
+#radio3-acessorios:checked~.fist {
+  margin-left: -50%;
+}
+
+#radio4-acessorios:checked~.fist {
+  margin-left: -75%;
+}
+
+#radio1-acessorios:checked~.navegacao .auto-btn1 {
+  background-color: #fff;
+}
+
+#radio2-acessorios:checked~.navegacao .auto-btn2 {
+  background-color: #fff;
+}
+
+#radio3-acessorios:checked~.navegacao .auto-btn3 {
+  background-color: #fff;
+}
+
+#radio4-acessorios:checked~.navegacao .auto-btn4 {
+  background-color: #fff;
+}
