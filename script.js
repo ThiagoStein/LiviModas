@@ -4,9 +4,6 @@ function iniciarSlider(sliderId, totalSlides, intervalo) {
     
     setInterval(function () {
         count++;
-
-        console.log("Iniciando slider: " + sliderId + " com " + totalSlides + " slides e intervalo de " + intervalo + "ms");
-
         if (count > totalSlides) {
             count = 1;
         }
